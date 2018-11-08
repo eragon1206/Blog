@@ -173,6 +173,10 @@ header .nav .navRight ul li a{
     color: #8e8e8e;
     float: left;
 }
+.tou h2{
+    color:#fff;
+
+}
 /*清除浮动*/
 .clear::after{
     content: "";
