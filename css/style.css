@@ -16,6 +16,10 @@ header{
     width: 100%;
     height: 60px;
     background-color: #2c2c2c;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
 }
 
 header .nav{
@@ -71,78 +75,73 @@ header .nav .navRight ul li a{
 *zoom:1;
 }
 /*轮播样式*/
-.container {
-    width: 1200px;
-    height: 310px;
-    font-size: 40px;
-    text-align: center;
-    margin: 10px auto;
-    background-color: #464576;
+.container{
+    margin-top:70px;
 }
-.carousel-item{line-height: 336px;color: #fff;font-family:  Arial Black}
-.ft-carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.shutter {
     overflow: hidden;
-}
+    width: 1200px;
+    height: 358px;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 10px;
 
-.ft-carousel .carousel-inner {
+}
+.shutter-img {
+    z-index: 1;
+}
+.shutter-img,
+.shutter-img a {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
     height: 100%;
 }
-
-.ft-carousel .carousel-inner .carousel-item {
-    float: left;
+.shutter-img a {
+    cursor: default;
+}
+.shutter-img a > img {
+    width: 100%;
     height: 100%;
 }
-
-.ft-carousel .carousel-item img {
-    width: 100%;
-}
-
-.ft-carousel .carousel-indicators {
+.shutter-img .created {
+    overflow: hidden;
     position: absolute;
-    left: 0;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 0;
+    z-index: 20;
 }
-
-.ft-carousel .carousel-indicators span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    margin: 0 4px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.ft-carousel .carousel-indicators span.active {
-    background-color: #de3a3a;
-}
-
-.ft-carousel .carousel-btn {
+.shutter-btn {}
+.shutter-btn li {
     position: absolute;
+    z-index: 2;
     top: 50%;
-    width: 50px;
-    height: 45px;
+    width: 49px;
+    height: 49px;
     margin-top: -25px;
     cursor: pointer;
 }
-
-.ft-carousel .carousel-prev-btn {
-    left: 0;
-    background: url(../img/prev.png) no-repeat;
+.shutter-btn li.prev {
+    left: 20px;
+    background: url(../img/shutter_prevBtn.png) no-repeat 0 -49px;
 }
-
-.ft-carousel .carousel-next-btn {
-    right: 0;
-    background: url(../img/next.png) no-repeat;
+.shutter-btn li.next {
+    right: 20px;
+    background: url(../img/shutter_nextBtn.png) no-repeat 0 -49px;
+}
+.shutter-desc {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: url(../img/shutter_shadow.png) repeat;
+}
+.shutter-desc p {
+    padding-left: 20px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 14px;
 }
 /*轮播样式结束*/
 /*简历*/
